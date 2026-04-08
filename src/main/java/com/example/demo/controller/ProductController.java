@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +10,12 @@ import com.example.demo.service.ProductService;
 
 @RestController
 @RequestMapping("/api/products")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://producthost.vercel.app",
+    "https://producthost-git-main-vijaykollu-7568s-projects.vercel.app",
+    "https://producthost-dk2kksf6k-vijaykollu-7568s-projects.vercel.app"
+})
 public class ProductController {
 
     @Autowired
